@@ -14,43 +14,51 @@
 
     <h1>Create a burguer!</h1>
 
-    <section> <!--more sections?-->
+    <section> <!--id: nombre_interno //name: nombre al enviar //value: valor enviado o nombre que se enseña-->
         <form action="order.html" method="post">
             <label for="protein">What type of protein would you like?</label>
             <input type="text" name="protein" id="protein">
             <hr>
             <label for="patty">How many patties do you like?</label>
-            <input type="text" name="patty" id="patty">
+            <input type="number" name="patty" id="patty" min="0" max="10">
             <hr>
-            <label for="cooked">How do you want your patty cooked</label> <!--integer-->
-            <input type="range" name="cooked" id="cooked"> <!--range-->
+            <label for="cooked">How do you want your patty cooked</label>
+            <br>
+            <label for="cooked">Rare</label>
+            <input type="range" name="cooked" id="cooked" value="3" min="1" max="5">
+            <label for="cooked">Well-Done</label>
             <hr>
             <label for="toppings">What toppings would you like?</label>
             <br>
-            <input type="checkbox" name="toppings" id="lettuce">
+            <input type="checkbox" name="lettuce" id="lettuce">
             <label for="lettuce">Lettuce</label>
-            <input type="checkbox" name="toppings" id="tomato">
+            <input type="checkbox" name="tomato" id="tomato">
             <label for="tomato">Tomato</label>
-            <input type="checkbox" name="toppings" id="onion">
+            <input type="checkbox" name="onion" id="onion">
             <label for="onion">Onion</label>
             <hr>
             <label for="cheese">Would you like to add cheese?</label>
-            <input type="radio" name="cheese" id="cheeseyes">
+            <input type="radio" name="cheese" id="cheeseyes" value="yes">
             <label for="cheeseyes">Yes</label>
-            <input type="radio" name="cheese" id="cheeseno">
+            <input type="radio" name="cheese" id="cheeseno" value="no">
             <label for="cheeseno">No</label>
             <hr>
             <label for="bun">What type of bun would you like?</label>
             <select name="bun" id="bun">
-                <option value="Sesame"></option>
-                <option value="Potato"></option>
-                <option value="Pretzel"></option>
+                <option value="Sesame">Sesame</option>
+                <option value="Potato">Potato</option>
+                <option value="Pretzel">Pretzel</option>
             </select>
             <hr>
-            <label for="sauce">What type of sauce would you like?</label>
-            <input type="text" name="sauce" id="sauce"> <!--sauce-->
+            <label for="sauceChoice">What type of sauce would you like?</label>
+            <input list="sauce" name="sauceChoice" id="sauceChoice">
+            <datalist id="sauce">
+                <option value="ketchup">Ketchup sauce</option>
+                <option value="mayo">Mayo sauce</option>
+                <option value="mustard">Mustard sauce</option>
+            </datalist>
             <hr>
-            <label for="anythingelse">Anything else you wnat to add?</label>
+            <label for="anythingelse">Anything else you want to add?</label>
             <br>
             <textarea name="anythingelse" id="anythingelse" cols="30" rows="5"></textarea>
             <hr>
